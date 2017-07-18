@@ -1,0 +1,6 @@
+/vendor/*
+/test/*
+test*
+composer.lock
+docs.sh
+*.sublime-workspace

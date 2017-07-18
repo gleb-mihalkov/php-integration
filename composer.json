@@ -1,0 +1,25 @@
+{
+    "name": "gm/php-integration",
+    "description": "Abstract integration model.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "gleb-mihalkov",
+            "email": "gleb.mihalkov.work@yandex.ru"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/gleb-mihalkov/php-process"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Integration\\": "src/"
+        }
+    },
+    "require": {
+        "gm/php-process": "dev-master"
+    }
+}
