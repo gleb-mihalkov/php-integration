@@ -5,6 +5,7 @@ namespace Integration
 
     /**
      * Базовый класс процесс перечисления элементов из источника данных.
+     * @link https://gleb-mihalkov.github.io/php-process-api/class-Process.Fetch.html Документация по \Process\Fetch
      */
     abstract class Source extends FetchProcess
     {
