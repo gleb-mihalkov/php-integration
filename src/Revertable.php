@@ -4,7 +4,6 @@ namespace Integration
     /**
      * Типаж, делающий процесс обратимым, запрещая при этом использование
      * событийных методов error() и end().
-     * @internal
      */
     trait Revertable
     {
