@@ -4,45 +4,46 @@ namespace Integration
     use Process\Exec as ExecProcess;
 
     /**
-     * Base class of the integration process.
+     * Базовый класс процесса интеграции.
      */
     abstract class Base extends ExecProcess
     {
         /**
-         * Gets the source element's fetching process.
-         * @return Source The source element's fetching process.
+         * Получает сущность процесса перечисления элементов из источника данных.
+         * @return Source Процесс перечисления элементов из источника.
          */
         abstract protected function getSource();
 
         /**
-         * Gets the destination element's writing process.
-         * @return Dest The destination element's writing process.
+         * Получает сущность процесса записи элементов в приемник данных.
+         * @return Dest Процесс записи элементов в приемник данных.
          */
         abstract protected function getDest();
 
         /**
-         * Creates destination element's from one source element and enumerate it.
-         * @param  mixed           $item Source element.
-         * @return Iterator<mixed>       Iterator of the destination elements.
+         * Для каждого элемента из источника данных возвращает перечисление элементов,
+         * которые должны быть записаны в приемник данных.
+         * @param  mixed           $item Очередной элемент из источника данных.
+         * @return Iterator<mixed>       Перечисление элементов для приемника данных.
          */
         abstract protected function map($item);
 
 
 
         /**
-         * The source's elements enumeration process.
+         * Сущность процесса перечисления элементов из источника данных.
          * @var Source
          */
         protected $source = null;
 
         /**
-         * The destination's elements writing process.
+         * Сущность процесса записи элементов в приемник данных.
          * @var Dest
          */
         protected $dest = null;
 
         /**
-         * Running before you start the process.
+         * Выполняется перед началом процесса интеграции.
          * @return void
          */
         protected function start()
@@ -54,10 +55,10 @@ namespace Integration
         }
 
         /**
-         * The process of the integration.
+         * Производит процесс интеграции.
          * @return void
          */
-        protected function exec()
+        protected function main()
         {
             $items = $this->source->process();
 
@@ -73,7 +74,7 @@ namespace Integration
         }
 
         /**
-         * Вызывается при возникновении ошибки во время выполнения процесса.
+         * Вызывается при возникновении ошибки в любом дочернем процессе.
          * @param  \Exception $error Ошибка.
          * @return void
          */
@@ -100,7 +101,7 @@ namespace Integration
 
 
         /**
-         * Executes process of the integration statically.
+         * Запускает процесс интеграции для данного класса.
          * @return void
          */
         public static function execute()
