@@ -5,7 +5,8 @@ namespace Integration
 
     /**
      * Базовый класс процесса интеграции.
-     * @link https://gleb-mihalkov.github.io/php-process-api/class-Process.Exec.html Документация по \Process\Exec
+     * 
+     * @link https://gleb-mihalkov.github.io/php-process-api/class-Process.Exec.html \Process\Exec
      */
     abstract class Base extends ExecProcess
     {

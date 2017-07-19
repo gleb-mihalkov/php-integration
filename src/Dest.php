@@ -5,7 +5,8 @@ namespace Integration
 
     /**
      * Базовый класс процесса записи элементов в приемник данных.
-     * @link https://gleb-mihalkov.github.io/php-process-api/class-Process.Write.html Документация по \Process\Write.
+     * 
+     * @link https://gleb-mihalkov.github.io/php-process-api/class-Process.Write.html \Process\Write.
      */
     abstract class Dest extends WriteProcess
     {
