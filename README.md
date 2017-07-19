@@ -1,7 +1,7 @@
-# PHP integration pattern
+# Паттерн процесса интеграции для PHP
 
-This library is described in the abstract integration process, with the source, destination of elements.
+Библиотека содержит абстрактные классы для процесса интеграции.
 
-## Description
+## Описание
 
-See [API docs](https://gleb-mihalkov.github.io/php-integration-api/).
+Подробнее в [документации](https://gleb-mihalkov.github.io/php-integration-api/).
