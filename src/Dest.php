@@ -4,7 +4,7 @@ namespace Integration
     use Process\Write as WriteProcess;
 
     /**
-     * The base class of destination's elements writing process.
+     * Базовый класс процесса записи элементов в приемник данных.
      */
     abstract class Dest extends WriteProcess
     {

@@ -4,7 +4,7 @@ namespace Integration
     use Process\Fetch as FetchProcess;
 
     /**
-     * The base class of source's elements enumeration process.
+     * Базовый класс процесс перечисления элементов из источника данных.
      */
     abstract class Source extends FetchProcess
     {
