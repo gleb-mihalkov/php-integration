@@ -8,6 +8,6 @@ namespace Integration
      */
     abstract class Source extends FetchProcess
     {
-        use Resolvable;
+        use Revertable;
     }
 }

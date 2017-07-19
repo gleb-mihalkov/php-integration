@@ -8,8 +8,6 @@ namespace Integration
      */
     abstract class Base extends ExecProcess
     {
-        use Resolvable;
-
         /**
          * Gets the source element's fetching process.
          * @return Source The source element's fetching process.
@@ -43,8 +41,6 @@ namespace Integration
          */
         protected $dest = null;
 
-
-
         /**
          * Running before you start the process.
          * @return void
@@ -77,23 +73,29 @@ namespace Integration
         }
 
         /**
-         * Commits the integration changes.
+         * Вызывается при возникновении ошибки во время выполнения процесса.
+         * @param  \Exception $error Ошибка.
          * @return void
          */
-        protected function commit()
+        protected function error($error)
         {
-            $this->source->commit();
-            $this->dest->commit();
+            parent::error($error);
+            if ($this->source) $this->source->_revert();
+            if ($this->dest) $this->dest->_revert();
         }
 
         /**
-         * Reverts the integration changes.
+         * Вызывается при любом завершении процесса.
          * @return void
          */
-        protected function revert()
+        protected function end()
         {
-            $this->source && $this->source->revert();
-            $this->dest && $this->dest->revert();
+            parent::end();
+
+            if ($this->isError) return;
+
+            $this->source->_commit();
+            $this->dest->_commit();
         }
 
 

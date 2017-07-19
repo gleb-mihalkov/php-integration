@@ -8,6 +8,6 @@ namespace Integration
      */
     abstract class Dest extends WriteProcess
     {
-        use Resolvable;
+        use Revertable;
     }
 }
