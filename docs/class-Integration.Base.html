@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Integration\Base</title>
+
+	<link rel="stylesheet" href="resources/style.css?c2f33731c1948fbed7c333554678bfa68d4817da">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+				<li class="active">
+					<a href="namespace-Integration.html">
+						Integration					</a>
+
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Integration.Base.html">Base</a></li>
+				<li><a href="class-Integration.Dest.html">Dest</a></li>
+				<li><a href="class-Integration.Source.html">Source</a></li>
+			</ul>
+
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="class-Integration.Revertable.html">Revertable</a></li>
+			</ul>
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text" placeholder="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Integration.html" title="Summary of Integration"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Base</h1>
+
+
+	<div class="description">
+	<p>Базовый класс процесса интеграции.</p>
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+Process\Exec
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Integration\Base</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br>
+		
+		<b>Namespace:</b> <a href="namespace-Integration.html">Integration</a><br>
+		
+
+				<b>Link:</b>
+				<a href="https://gleb-mihalkov.github.io/php-process-api/class-Process.Exec.html">\Process\Exec</a><br>
+			<b>Located at</b> <a href="source-class-Integration.Base.html#6-114" title="Go to source code">Base.php</a>
+		<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="getSource" id="_getSource">
+
+		<td class="attributes"><code>
+			abstract protected 
+
+			<code><a href="class-Integration.Source.html">Integration\Source</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSource">#</a>
+		<code><a href="source-class-Integration.Base.html#13-17" title="Go to source code">getSource</a>( )</code>
+
+		<div class="description short">
+			<p>Получает сущность процесса перечисления элементов из источника данных.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Получает сущность процесса перечисления элементов из источника данных.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Integration.Source.html">Integration\Source</a></code><br>Процесс перечисления элементов из источника.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDest" id="_getDest">
+
+		<td class="attributes"><code>
+			abstract protected 
+
+			<code><a href="class-Integration.Dest.html">Integration\Dest</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDest">#</a>
+		<code><a href="source-class-Integration.Base.html#19-23" title="Go to source code">getDest</a>( )</code>
+
+		<div class="description short">
+			<p>Получает сущность процесса записи элементов в приемник данных.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Получает сущность процесса записи элементов в приемник данных.</p>
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Integration.Dest.html">Integration\Dest</a></code><br>Процесс записи элементов в приемник данных.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="map" id="_map">
+
+		<td class="attributes"><code>
+			abstract protected 
+
+			Iterator&lt;mixed&gt;
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_map">#</a>
+		<code><a href="source-class-Integration.Base.html#25-31" title="Go to source code">map</a>( <span>mixed <var>$item</var></span> )</code>
+
+		<div class="description short">
+			<p>Для каждого элемента из источника данных возвращает перечисление элементов,
+которые должны быть записаны в приемник данных.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Для каждого элемента из источника данных возвращает перечисление элементов,
+которые должны быть записаны в приемник данных.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$item</var></dt>
+					<dd>Очередной элемент из источника данных.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					Iterator&lt;mixed&gt;<br>Перечисление элементов для приемника данных.
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="start" id="_start">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_start">#</a>
+		<code><a href="source-class-Integration.Base.html#47-57" title="Go to source code">start</a>( )</code>
+
+		<div class="description short">
+			<p>Выполняется перед началом процесса интеграции.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Выполняется перед началом процесса интеграции.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="main" id="_main">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_main">#</a>
+		<code><a href="source-class-Integration.Base.html#59-76" title="Go to source code">main</a>( )</code>
+
+		<div class="description short">
+			<p>Производит процесс интеграции.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Производит процесс интеграции.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="error" id="_error">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_error">#</a>
+		<code><a href="source-class-Integration.Base.html#78-88" title="Go to source code">error</a>( <span>Exception <var>$error</var></span> )</code>
+
+		<div class="description short">
+			<p>Вызывается при возникновении ошибки в любом дочернем процессе.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Вызывается при возникновении ошибки в любом дочернем процессе.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$error</var></dt>
+					<dd>Ошибка.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="end" id="_end">
+
+		<td class="attributes"><code>
+			 protected 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_end">#</a>
+		<code><a href="source-class-Integration.Base.html#90-102" title="Go to source code">end</a>( )</code>
+
+		<div class="description short">
+			<p>Вызывается при любом завершении процесса.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Вызывается при любом завершении процесса.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="execute" id="_execute">
+
+		<td class="attributes"><code>
+			 public static
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_execute">#</a>
+		<code><a href="source-class-Integration.Base.html#105-113" title="Go to source code">execute</a>( )</code>
+
+		<div class="description short">
+			<p>Запускает процесс интеграции для данного класса.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Запускает процесс интеграции для данного класса.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="source" id="$source">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Integration.Source.html">Integration\Source</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Integration.Base.html#35-39" title="Go to source code"><var>$source</var></a>
+
+			<div class="description short">
+				<p>Сущность процесса перечисления элементов из источника данных.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Сущность процесса перечисления элементов из источника данных.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$source" class="anchor">#</a>
+				<code><span class="php-keyword1">null</span></code>
+			</div>
+		</td>
+	</tr>
+	<tr data-order="dest" id="$dest">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-Integration.Dest.html">Integration\Dest</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-Integration.Base.html#41-45" title="Go to source code"><var>$dest</var></a>
+
+			<div class="description short">
+				<p>Сущность процесса записи элементов в приемник данных.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Сущность процесса записи элементов в приемник данных.</p>
+
+			</div>
+		</td>
+		<td class="value">
+			<div>
+				<a href="#$dest" class="anchor">#</a>
+				<code><span class="php-keyword1">null</span></code>
+			</div>
+		</td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>

@@ -4,4 +4,4 @@
 
 ## Описание
 
-Подробнее в [документации](https://gleb-mihalkov.github.io/php-integration-api/).
+Подробнее в [документации](https://gleb-mihalkov.github.io/php-integration/).
